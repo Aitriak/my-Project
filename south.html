@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>south</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .header img {
+            width: 100%;
+            height: 800px;
+            object-fit: cover;
+        }
+
+        .header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .header .title {
+            color: white;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .header .subtitle {
+            color: white;
+            font-size: 1.2em;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 800px;
+            /* ความกว้างสูงสุดของข้อความ */
+            padding: 0 20px;
+            /* ระยะห่างซ้ายขวา */
+        }
+
+        /* สไตล์หัวข้อ */
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            /* สีดำ */
+            margin-bottom: 20px;
+        }
+
+        /* สไตล์คำอธิบาย */
+        .description {
+            font-size: 24px;
+            color: #555;
+            /* สีเทาเข้ม */
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* สไตล์ footer */
+        .footer {
+            font-size: 24px;
+            color: #888;
+            /* สีเทาอ่อน */
+            margin-top: 10px;
+        }
+
+        .content-container {
+            max-width: 1000px;
+            /* ความกว้างสูงสุดของเนื้อหา */
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            margin: auto;
+
+        }
+
+        /* สไตล์แต่ละรายการ */
+        .item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 50px;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .item-image {
+            width: 150px;
+            /* ความกว้างของภาพ */
+            height: 100px;
+            /* ความสูงของภาพ */
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        .item-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .item-number {
+            background-color: #ffc107;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .item-title {
+            font-size: 24px;
+            margin: 0 0 10px;
+            color: #000;
+        }
+
+        .item-description {
+            font-size: 19px;
+            margin: 0 0 10px;
+            line-height: 1.6;
+        }
+
+        .item-link a {
+            font-size: 14px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .item-link a:hover {
+            text-decoration: underline;
+        }
+
+        .content-container {
+            max-width: 800px;
+            /* ความกว้างสูงสุดของเนื้อหา */
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* สไตล์แต่ละรายการ */
+        .item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .item-image {
+            width: 150px;
+            /* ความกว้างของภาพ */
+            height: 100px;
+            /* ความสูงของภาพ */
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        .item-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .item-number {
+            background-color: #ffc107;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .item-title {
+            font-size: 18px;
+            margin: 0 0 10px;
+            color: #000;
+        }
+
+        .item-description {
+            font-size: 14px;
+            margin: 0 0 10px;
+            line-height: 1.6;
+        }
+
+        .item-link a {
+            font-size: 14px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .item-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <header class="header">
+        <img src="../img/south.jpg" alt="Header Background">
+        <div class="overlay">
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="title">20 สูตร “เมนูอาหารใต้” รสชาติเข้มข้นถึงใจ จนต้องบอกหรอยอย่างแรง! อ่านต่อได้ที่ </h1>
+        <p class="description">
+            ขอเสนอ 20 สูตร “เมนูอาหารใต้” รสชาติเข้มข้นโดนใจคนรักอาหารใต้อย่างแน่นอน
+            แล้วแต่ละเมนูที่คัดสรรมานั้นทำง่ายสุด ๆ ถ้าใครพร้อมที่จะหรอยอย่างแรง อ่านต่อได้ที่
+
+        </p>
+        <p class="footer">18 ธ.ค. 2024 · โดย ไกด์และโอม</p>
+    </div>
+
+    <div class="content-container">
+        <!-- รายการที่ 1 -->
+        <div class="item">
+            <img src="https://img.wongnai.com/p/1920x0/2018/04/25/e96139a2c8c54b7e8f55be6dd45649c1.jpg" alt="
+            คั่วกลิ้งซี่โครงหมู" class="item-image">
+            <div class="item-content">
+                <div class="item-number">1</div>
+                <h2 class="item-title">
+                    คั่วกลิ้งซี่โครงหมู </h2>
+                <p class="item-description">
+                    ไม่จำเป็นต้องไปถึงใต้ ก็หรอยจังหูได้ที่บ้าน กับเมนูอาหารใต้
+                    “คั่วกลิ้งซี่โครงหมู” สูตรพริกแกงทำเองกับมือ
+                    ถ้าพร้อมแล้วไปดูวิธีทำกันเลย
+                </p>
+                <p class="item-link"><a
+                        href="https://www.wongnai.com/recipes/pork-rib-with-yellow-curry-paste">ดูวิธีทำเพิ่มเติม »</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- รายการที่ 2 -->
+        <div class="item">
+            <img src="https://s359.kapook.com//pagebuilder/72925306-cfc0-4521-96b0-40f21ce7d9a9.jpg"
+                alt=" แกงกะทิปูใบชะพลู" class="item-image">
+            <div class="item-content">
+                <div class="item-number">2</div>
+                <h2 class="item-title">แกงกะทิปูใบชะพลู</h2>
+                <p class="item-description">
+                    <br>
+                    เข้มข้นถึงเครื่องแกง เด็ดจนไม่อยากจะวางช้อน กับเมนู
+                    “แกงกะทิปูใบชะพลู” ที่มาพร้อมวิธีทำที่ทำตามได้ไม่ยาก
+                    พร้อมแล้วตามมาเข้าครัวกันเลย!
+                </p>
+                <p class="item-link"><a
+                        href="https://www.wongnai.com/recipes/yellow-curry-with-lump-crab-and-betal-leaf">ดูวิธีทำเพิ่มเติม
+                        »</a></p>
+            </div>
+        </div>
+
+        <!-- รายการที่ 3 -->
+        <div class="item">
+            <img src="https://img.wongnai.com/p/1920x0/2018/03/26/62a2099b4eaa4454a53d324923203cec.jpg" alt=" ไข่ครอบ "
+                class="item-image">
+            <div class="item-content">
+                <div class="item-number">3</div>
+                <h2 class="item-title">
+                    ไข่ครอบ </h2>
+                <p class="item-description">
+                    <br>
+                    สูตรลับจากสงขลากับเมนู “ไข่ครอบ” เมนูอาหารใต้ ชื่อแปลกแต่ทำง่าย
+                    ใช้วัตถุดิบแค่สามอย่าง รสหรอยโดนใจ ไม่ต้องไปไกล
+                    เพราะเรามาเสิร์ฟให้แล้ว พร้อมแล้วไปทำตามโล้ด!
+                </p>
+                <p class="item-link"><a
+                        href="https://www.wongnai.com/recipes/salted-duck-egg-yolk">ดูวิธีทำเพิ่มเติม
+                        »</a></p>
+            </div>
+        </div>
+    </div>
+
+</html>

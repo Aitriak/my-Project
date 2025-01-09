@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    position: relative;
+    min-height: 100vh;
+}
+
+.hero {
+    background-image: url('./img/region.png');
+    /* ใช้ชื่อไฟล์ของคุณ */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /*เพิ่มเงาเข้มให้ภาพ */
+}
+
+.hero h1 {
+    font-size: 3em;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #e63946;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s;
+}
+
+.hero button:hover {
+    background-color: #d62828;
+}
+
+/* ส่วนเลือกภูมิภาค */
+.region-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.region-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* จัดเรียงปุ่มภูมิภาคในแนวนอน */
+.region-buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 2em;
+}
+
+.region-buttons button {
+    flex: 1 1 22%;
+    /* ปรับปุ่มให้กว้างประมาณ 22% ของพื้นที่ */
+    padding: 10px;
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.region-buttons button:hover {
+    background-color: #d62828;
+}
+
+.about-us {
+    background-color: #fff;
+    /* พื้นหลังสีขาว */
+    margin: 20px;
+    /* ระยะห่างจากขอบหน้าจอ */
+    padding: 20px;
+    /* ระยะห่างภายในคอนเทนเนอร์ */
+    border-radius: 8px;
+    /* มุมโค้ง */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* เพิ่มเงาเบาๆ */
+
+}
+
+.about-section {
+    text-align: center;
+    /* จัดข้อความให้อยู่ตรงกลาง */
+    margin: 0 auto;
+    /* จัดให้อยู่กลางคอนเทนเนอร์ */
+    padding: 20px;
+    /* เพิ่มพื้นที่ภายใน */
+}
+
+/* สไตล์สำหรับหัวข้อ */
+.about-section h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+    /* เพิ่มระยะห่างระหว่างหัวข้อกับข้อความ */
+}
+
+/* สไตล์สำหรับข้อความ */
+.about-section p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #666;
+    /* สีเทาเพื่อให้อ่านง่าย */
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.author-info {
+    text-align: center;
+}
+.author-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+.author-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+.author-bio {
+    font-size: 1em;
+    color: #666;
+    margin-top: 10px;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .region-buttons button {
+        flex: 1 1 48%;
+        /* ปรับปุ่มให้กว้างประมาณ 48% ของพื้นที่เมื่อหน้าจอแคบลง */
+    }
+}
